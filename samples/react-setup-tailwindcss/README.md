@@ -4,7 +4,7 @@
 
 Sample web part illustrating using [Tailwind CSS](https://tailwindcss.com/) in a SharePoint Framework.
 
-[picture of the solution in action, if possible]
+![spfx-tailwind](https://user-images.githubusercontent.com/8691985/112730186-c59e8780-8f62-11eb-9c9f-d617e427cf5f.gif)
 
 ## Used SharePoint Framework Version
 
