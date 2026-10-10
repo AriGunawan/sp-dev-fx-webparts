@@ -383,6 +383,7 @@ export default class AdaptiveCardHostWebPart extends BaseClientSideWebPart<IAdap
 
       // Load the data
       await this._loadDataFromList();
+      await this._loadDataFromUrl();
 
       // Render the card
       this.render();
@@ -452,11 +453,11 @@ export default class AdaptiveCardHostWebPart extends BaseClientSideWebPart<IAdap
       return;
     }
 
-    this.context.httpClient
+    return this.context.httpClient
       .get(this.properties.dataUrl, HttpClient.configurations.v1)
       .then((response: HttpClientResponse) => {
         if (response.ok) {
-          response.json().then((data: any) => {
+          return response.json().then((data: any) => {
             this._dataJSON = JSON.stringify(data);
           });
         }
@@ -471,11 +472,11 @@ export default class AdaptiveCardHostWebPart extends BaseClientSideWebPart<IAdap
       return;
     }
 
-    this.context.httpClient
+    return this.context.httpClient
       .get(this.properties.templateUrl, HttpClient.configurations.v1)
       .then((response: HttpClientResponse) => {
         if (response.ok) {
-          response.json().then((data: any) => {
+          return response.json().then((data: any) => {
             this._templateJSON = JSON.stringify(data);
           });
         }

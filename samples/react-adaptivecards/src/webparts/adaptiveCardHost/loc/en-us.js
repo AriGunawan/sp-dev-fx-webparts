@@ -5,7 +5,7 @@ define([], function () {
     AdaptiveCardWarningPartTwo: " features. You should configure this web part and enable ",
     AdaptingTemplatingWarningIntro: "It looks like you're using a template with ",
     DataNeededButtonLabel: "Configure data source",
-    DataNeededDescription: "When you use Adaptive Card Templating, you need to provide either static JSON data, or from a SharePoint list.",
+    DataNeededDescription: "When you use Adaptive Card Templating, you need to provide data from static JSON, a SharePoint list, or a URL.",
     DataNeededIconText: "You need data!",
     ListFieldLabel: "Select a list",
     DataUrlLabel: "Data source URL",
